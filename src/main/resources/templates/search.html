@@ -37,6 +37,30 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
+<table class = "job-listing" th:block th:each="job : ${jobs}">
+
+    <tr >
+        <td th:text="ID"></td>
+        <td th:text="${job.Id}"></td>
+    </tr>
+    <tr >
+        <td th:text="Name"></td>
+        <td th:text="${job.name}"></td>
+    <tr >
+        <td th:text="Employer"></td>
+        <td th:text="${job.employer}"></td>
+    <tr >
+        <td th:text="Location"></td>
+        <td th:text="${job.Location}"></td>
+    <tr >
+        <td th:text="Postion+Type"></td>
+        <td th:text="${job.positionType}"></td>
+    <tr >
+    <td th:text="Skills"></td>
+    <td th:text="${job.coreCompetency}"></td>
+    <tr >
+
+</table>
 
 </div>
 

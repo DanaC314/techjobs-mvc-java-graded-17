@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="~{fragments :: head}">
+<head th:replace="~{fragments :: head}"></head>
 
 <body>
 
@@ -24,15 +24,12 @@
       </li>
     </td> <!-- Feel free to remove or modify this element if necessary. -->
 
-
-
-
-
     <td th:each="category : ${tableChoices}">
-        <li th:each="item : ${category.value}">
-          <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
-        </li>
+            <li th:each="item : ${category.value}">
+                <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
+            </li>
     </td>
+
   </tr>
 </table>
 
